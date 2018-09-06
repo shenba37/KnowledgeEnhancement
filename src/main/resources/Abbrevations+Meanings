@@ -1,0 +1,6 @@
+work-order :
+
+A work order is usually a task or a job for a customer, that can be scheduled or assigned to someone.
+Such an order may be from a customer request or created internally within the organization.
+
+Work Orders may also be created as follow ups to Inspections or Audits. A work order may be for products or services.
