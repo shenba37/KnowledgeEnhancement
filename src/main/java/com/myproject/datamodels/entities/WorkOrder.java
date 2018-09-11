@@ -53,6 +53,7 @@ A rate (e.g. $/hr, $/week) and also the total number of hours worked and total v
 @Setter
 @NoArgsConstructor
 @ToString
+@Deprecated
 public class WorkOrder {
 
     private int id;

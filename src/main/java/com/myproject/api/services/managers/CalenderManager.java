@@ -6,13 +6,16 @@ import com.myproject.datamodels.enums.Owner;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
 public class CalenderManager {
+    public static List<Assignment> assignments = new ArrayList<>();
 
     public static Assignment createNewAssignment(String description,LocalDate startDate,LocalDate endDate){
         Assignment assignment = new Assignment(new Random().nextInt());
@@ -50,6 +53,7 @@ public class CalenderManager {
 
     public static void main(String[] args) {
         Assignment assignment = createNewAssignment("Assignment-1",LocalDate.now(),LocalDate.now().plusDays(8));
+        assignments.add(assignment);
         scheduleNewAssignment(assignment);
     }
 }
