@@ -1,8 +1,8 @@
 package com.myproject.api.services.managers;
 
 import com.myproject.datamodels.entities.Assignment;
+import com.myproject.datamodels.enums.AssignmentStatus;
 import com.myproject.datamodels.enums.Owner;
-import com.myproject.datamodels.enums.Status;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -19,13 +19,13 @@ public class CalenderManager {
         assignment.setDescription(description);
         assignment.setStartDate(startDate);
         assignment.setEndDate(endDate);
-        assignment.setStatus(Status.NEW);
+        assignment.setStatus(AssignmentStatus.NEW);
         return assignment;
     }
 
     public static void scheduleNewAssignment(Assignment assignment){
         assignment.setDaysTable(createDaysTable(assignment.getStartDate(),assignment.getEndDate()));
-        assignment.setStatus(Status.SCHEDULED);
+        assignment.setStatus(AssignmentStatus.SCHEDULED);
     }
 
     private static Map<LocalDate,Owner> createDaysTable(LocalDate assignmentStartDate, LocalDate assignmentEndDate){
@@ -49,7 +49,7 @@ public class CalenderManager {
     }
 
     public static void main(String[] args) {
-        Assignment assignment = createNewAssignment("Assignment-1",LocalDate.now(),LocalDate.of(2018,9,10));
+        Assignment assignment = createNewAssignment("Assignment-1",LocalDate.now(),LocalDate.now().plusDays(8));
         scheduleNewAssignment(assignment);
     }
 }

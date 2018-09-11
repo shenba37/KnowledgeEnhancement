@@ -1,9 +1,8 @@
 package com.myproject.datamodels.entities;
 
+import com.myproject.datamodels.enums.AssignmentStatus;
 import com.myproject.datamodels.enums.Owner;
-import com.myproject.datamodels.enums.Status;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
@@ -18,6 +17,6 @@ public class Assignment {
     private String description;
     private LocalDate startDate;
     private LocalDate endDate;
-    private Status status;
+    private AssignmentStatus status;
     private Map<LocalDate,Owner> daysTable;
 }

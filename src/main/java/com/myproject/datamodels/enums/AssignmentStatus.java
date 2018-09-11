@@ -1,15 +1,16 @@
 package com.myproject.datamodels.enums;
 
-public enum Status {
+public enum AssignmentStatus {
     NEW(1),
     SCHEDULED(2),
     IN_PROGRESS(3),
-    COMPLETED(4),
-    ARCHIVED(5),
-    CANCELLED(6);
+    ON_HOLD(4),
+    COMPLETED(5),
+    CANCELLED(6),
+    ARCHIVED(7);
 
     int value;
-    Status(int value){
+    AssignmentStatus(int value){
         this.value = value;
     }
 }

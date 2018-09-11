@@ -1,7 +1,6 @@
 package com.myproject.datamodels.entities;
 
 import com.myproject.datamodels.enums.Priority;
-import com.myproject.datamodels.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -62,7 +61,7 @@ public class WorkOrder {
     private Priority priority;
     private Employee assignee;
     private List<Employee> watchers;
-    private Status status;
+    //private Status status;
 
     private LocalDateTime dueDate;
     private String originalEstimate;
